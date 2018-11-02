@@ -18,28 +18,28 @@ public class EmployeeApplication{
 		eA.addEs(eD);
 		eA.prints(eD);
 		Employee[] sorted = new Employee[3];
-		sorted = eA.sorteDByName(eD,3);
+		sorted = eA.sortedByName(eD,3);
 		eA.prints(sorted);
 
     }
 
 
-	public Employee[] sorteDByName(Employee[] database, int databaseSize)
+	public Employee[] sortedByName(Employee[] database, int databaseSize)
     {
-        Employee[] srtD = database;
-        for(int i=1; i<(databaseSize); i++)
+        Employee[] sortD = database;
+        for(int iterator1=1; iterator1<(databaseSize); iterator1++)
         {
-            for(int j=0; j<(databaseSize-i); j++)
+            for(int j=0; j<(databaseSize-iterator1); j++)
             {
-                if (srtD[j].getlN().compareTo(srtD[j+1].getlN())>0)
+                if (sortD[j].getLastName().compareTo(sortD[j+1].getLastName())>0)
                 {
-                    Employee temp = srtD[j+1];
-                    srtD[j+1] = srtD[j];
-                    srtD[j] = temp;
+                    Employee temp = sortD[j+1];
+                    sortD[j+1] = sortD[j];
+                    sortD[j] = temp;
                 }
             }
         }
-        return srtD;
+        return sortD;
     }
 
 	public void addEs(Employee[] eD)
@@ -50,19 +50,19 @@ public class EmployeeApplication{
 		{
 			eD[i] = new Employee();
 			System.out.print("Enter an Employee's First Name: ");
-			String fName = input.nextLine();
+			String firstName = input.nextLine();
 			System.out.print("Enter an Employee's Last  Name: ");
-			String lName = input.nextLine();
+			String lastName = input.nextLine();
 			System.out.print("Enter an Employee's Address: ");
-			String addr = input.nextLine();
+			String address = input.nextLine();
 			System.out.print("Enter an Employee's Phone Number: ");
-			String NUM = input.nextLine();
+			String number = input.nextLine();
 			System.out.print("Enter an Employee's Hire Date: ");
 			String hireDate = input.nextLine();
 			System.out.print("Enter an Employee's starting Salary: ");
-			String dol = input.nextLine();
+			String salary = input.nextLine();
 
-			eD[i].setSTUFFUP(fName, lName, addr,  NUM, hireDate,  dol);
+			eD[i].InitializeVariable(firstName, lastName, address,  number, hireDate, salary);
 
 
 

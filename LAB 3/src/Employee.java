@@ -15,7 +15,7 @@ public class Employee
 
     public Employee (){}
 
-    public void setSTUFFUP(String firstName, String lastName, String address, String number,
+    public void InitializeVariable(String firstName, String lastName, String address, String number,
     String hireDate, String salary)
     {
         this.firstName = firstName;
@@ -31,24 +31,24 @@ public class Employee
         return this.firstName;
     }
 
-    public void setfirstName(String firstName)
+    public void setFirstName(String firstName)
     {
         this.firstName = firstName;
     }
 
-    public String getlN()
+    public String getLastName()
     {
-        return this.lN;
+        return this.lastName;
     }
 
-    public String getaddr()
+    public String getAddress()
     {
-        return this.addr;
+        return this.address;
     }
 
-    public String getNUM()
+    public String getNumber()
     {
-        return this.NUM;
+        return this.number;
     }
 
     public String getHireDate()
@@ -56,9 +56,9 @@ public class Employee
         return this.hireDate;
     }
 
-    public String getdol()
+    public String getSalary()
     {
-        return this.dol;
+        return this.salary;
     }
 
     public void printEmployeeData()
@@ -66,11 +66,11 @@ public class Employee
         System.out.format(
             "Name: %s %s| addr: %s| Phone Number: %s|" +
             " Hire Date: %s| dol: %s \n",
-            this.fNam,
-            this.lN,
-            this.addr,
-            this.NUM,
+            this.firstName,
+            this.lastName,
+            this.address,
+            this.number,
             this.hireDate,
-            this.dol);
+            this.salary);
     }
 }
